@@ -24,7 +24,6 @@ namespace Lab2_Zakshevskij_UTS_22
         }
         private void Bt_Click(object sender, RoutedEventArgs e)
         {
-            
             if (Rb1.IsChecked==true)
             {
                 int ColorIndex = Cb1.SelectedIndex;
@@ -49,10 +48,30 @@ namespace Lab2_Zakshevskij_UTS_22
             }
             if (Rb2.IsChecked==true)
             {
-                int R = int.Parse(Tb1.Text);
-                int G = int.Parse(Tb2.Text);
-                int B = int.Parse(Tb3.Text);
-                Wind.Background = new SolidColorBrush(Color.FromArgb(255, (byte)R, (byte)G, (byte)B));
+                
+                string A = Tb1.Text;
+                string F = Tb2.Text;
+                string C = Tb3.Text;
+                int R = 0;
+                int G = 0;
+                int B = 0;
+                bool res;
+                if ((int.TryParse(A, out R))&&(int.TryParse(F, out G))&&(int.TryParse(C, out B)))
+                {
+                    res = true;
+                    R = int.Parse(A);
+                    G = int.Parse(F);
+                    B = int.Parse(C);
+                }
+                else
+                {
+                    res = false;
+                    MessageBox.Show("Данные введены некорректно! Повторите ввод.");
+                }
+                if (res == true)
+                {
+                    Wind.Background = new SolidColorBrush(Color.FromArgb(255, (byte)R, (byte)G, (byte)B));
+                }
             }
         }
     }

@@ -22,6 +22,6 @@
         <TextBox x:Name="Tb1" HorizontalAlignment="Left" Margin="598,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" Height="27" Text="0" FontSize="18"/>
         <TextBox x:Name="Tb2" HorizontalAlignment="Left" Margin="598,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" Height="26" Text="0" FontSize="18"/>
         <TextBox x:Name="Tb3" HorizontalAlignment="Left" Margin="598,250,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="67" Height="26" FontSize="18"/>
-        <Button x:Name="Bt" Content="Сменить цвет" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Height="71" Width="132"/>
+        <Button x:Name="Bt" Content="Сменить цвет" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Height="71" Width="132" Click="Bt_Click"/>
     </Grid>
 </Window>
